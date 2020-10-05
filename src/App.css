@@ -1,6 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -9,3 +10,25 @@ h5,
 h6 {
   font-weight: bold;
 }
+
+a.navbar-brand {
+  width: 250px;
+}
+
+a.navbar-brand img {
+  width: 100%;
+  height: auto;
+}
+
+span.profile-pic {
+  position: relative;
+}
+
+span.profile-pic img {
+  position: absolute;
+  top: -14px;
+  left: 135px;
+  width: 50px;
+  border-radius: 50%;
+}
+
