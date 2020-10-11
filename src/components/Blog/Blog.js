@@ -1,10 +1,12 @@
 import React from 'react';
+import NavBar from '../Header/NavBar';
 
 const Blog = () => {
     return (
-        <div>
-            <h2>This is blog</h2>
-        </div>
+        <>
+            <NavBar/>
+            <h2 style={{textAlign: 'center', marginTop: '80px'}}>This is blog</h2>
+        </>
     );
 };
 

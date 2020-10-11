@@ -1,21 +1,15 @@
 .login-container {
-    width: 60%;
     margin: 50px auto;
+    height: 100vh;
 }
 
-.login-logo {
+.register-login-logo {
     text-align: center;
 }
 
-.login-logo img {
+.register-login-logo img {
     width: 250px;
-}
-
-.google-login {
-    border: 1px solid #f8f8f8;
-    border-radius: 5px;
-    padding: 50px 20px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .login-container h4 {

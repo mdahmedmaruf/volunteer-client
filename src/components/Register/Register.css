@@ -1,0 +1,22 @@
+.registration-container {
+    margin: 50px auto;
+}
+
+.registration-form h4 {
+    margin-bottom: 30px;
+}
+
+.registration-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.registration-form input[type="submit"] {
+    background-color: #3F90FC;
+    border: 0;
+    color: #FFFFFF;
+}

@@ -19,41 +19,40 @@ const NavBar = () => {
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
+                        <li className="nav-item mx-2">
                             <Link className="nav-link" to="/">Home</Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item mx-2">
                             <Link className="nav-link" to="/donation">Donation</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/events">Events</Link>
-                        </li>
-                        <li className="nav-item">
+                        <li className="nav-item mx-2">
                             <Link className="nav-link" to="/blog">Blog</Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item mx-2">
                             <Link className="nav-link signin-button" to="/register">Register</Link>
                         </li>
                         {
                         loggedInUser.email ? (
-                            <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span className="profile-pic"><img src={loggedInUser.photo} alt=""/></span> {loggedInUser.name}
-                                </Link>
+                            <>
+                            <li className="nav-item mx-2">
+                                <Link className="nav-link admin-button btn-primary text-light rounded-sm px-3" to="/events">Admin</Link>
+                            </li>
+                            <li className="nav-item dropdown ml-2  user-name">
+                                <p className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span className="profile-pic"><img src={loggedInUser.photo} alt=""/></span> {loggedInUser.name}
+                                </p>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <Link className="dropdown-item">Profile</Link>
-                                <Link onClick={() => setLoggedInUser({})} className="dropdown-item">Sign Out</Link>
+                                    <Link to="/profile" className="dropdown-item">Profile</Link>
+                                    <p onClick={() => setLoggedInUser({})} className="dropdown-item" role="button">Sign Out</p>
                                 </div>
                             </li>
+                            </>
                             ) : (
                             <li>
-                                <Link className="nav-link signin-button" to="/login">Sign in</Link>
+                                <Link className="nav-link signin-button btn-primary text-light rounded-sm px-3 mx-2" to="/login">Sign in</Link>
                             </li>
                             )
                         }
-                        
-
-                        
                     </ul>
                 </div>
             </nav>

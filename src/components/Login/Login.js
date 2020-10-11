@@ -46,12 +46,18 @@ const Login = () => {
     };
     return (
         <div className="login-container">
-            <div className="login-logo">
+            <div className="register-login-logo mb-5">
                 <Link to="/"><img src={logo} alt=""/></Link>
             </div>
-            <div className="google-login">
-                <h4>Login With</h4>
-                <button onClick={handleGoogleSignIn} className="login-button"><span><img className="img-fluid" src={google} alt=""/></span>Continue with Google</button>
+            <div className="row">
+                <div className="col-md-3"></div>
+                <div className="col-md-6 mt-5">
+                    <div className="google-login border border-info rounded-sm my-5 mx-3 p-5">
+                        <h4>Login With</h4>
+                        <button onClick={handleGoogleSignIn} className="login-button"><span><img className="img-fluid" src={google} alt=""/></span>Continue with Google</button>
+                    </div>
+                </div>
+                <div className="col-md-3"></div>
             </div>
         </div>
     );

@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import Home from './components/Home/Home';
 import Donation from './components/Donation/Donation';
-import AddEvent from './components/AddEvent/AddEvent';
+import AddEvent from './components/Admin/AddEvent';
 import Blog from './components/Blog/Blog';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import { VolunteerContext } from './components/Volunteer/VolunteerContext';
-import RegisterUser from './components/RegisterUser/RegisterUser';
+import RegisterUser from './components/Admin/RegisterUser';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Profile from './components/Admin/Profile';
 
 export const UserContext = createContext();
 
@@ -40,6 +41,9 @@ const App = () => {
           </Route>
           <PrivateRoute path="/users">
             <RegisterUser/>
+          </PrivateRoute>
+          <PrivateRoute path="/profile">
+            <Profile/>
           </PrivateRoute>
         </Switch>
       </Router>

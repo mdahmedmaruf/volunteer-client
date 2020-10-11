@@ -1,10 +1,12 @@
 import React from 'react';
+import NavBar from '../Header/NavBar';
 
 const Donation = () => {
     return (
-        <div>
-            <h2>This is donation</h2>
-        </div>
+        <>
+            <NavBar/>
+            <h2 style={{textAlign: 'center', marginTop: '80px'}}>Our Donation Program will be Launch Soon!!!! <br/> Stay Connected </h2>
+        </>
     );
 };
 
